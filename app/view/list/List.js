@@ -1,11 +1,8 @@
-/**
- * This view is an example list of people.
- */
-Ext.define('Sofoil.view.main.List', {
+Ext.define('Sofoil.view.list.List',{
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
 
-    title: 'Personnel',
+    title: 'Контакты',
 
     store: {
         type: 'personnel'
@@ -18,6 +15,6 @@ Ext.define('Sofoil.view.main.List', {
     ],
 
     listeners: {
-        select: 'onItemSelected'
+        rowdblclick: 'onItemSelected'
     }
 });

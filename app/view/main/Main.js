@@ -12,15 +12,23 @@ Ext.define('Sofoil.view.main.Main', {
     requires: [
         'Sofoil.view.main.MainController',
         'Sofoil.view.main.MainModel',
-        'Sofoil.view.main.List'
+        'Sofoil.view.list.List',
+        'Sofoil.view.info.Info'
     ],
 
     controller: 'main',
     viewModel: 'main',
 
+    layout: {
+        type: 'card'
+    },
+
     activeItem: 0,
 
     items: [{
         xtype: 'mainlist'
+    }, {
+        xtype: 'info',
+        reference: 'info'
     }]
 });

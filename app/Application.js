@@ -8,10 +8,6 @@ Ext.define('Sofoil.Application', {
     
     name: 'Sofoil',
 
-    routes: {
-        'user/:id': 'showUser'
-    },
-
     stores: [
         'Sofoil.store.Personnel'
     ]
