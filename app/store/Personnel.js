@@ -3,16 +3,44 @@ Ext.define('Sofoil.store.Personnel', {
 
     alias: 'store.personnel',
 
-    fields: [
-        'name', 'email', 'phone'
+    requires: [
+        'Sofoil.model.User'
     ],
 
-    data: { items: [
-        { name: 'Jean Luc', email: "jeanluc.picard@enterprise.com", phone: "555-111-1111" },
-        { name: 'Worf',     email: "worf.moghsson@enterprise.com",  phone: "555-222-2222" },
-        { name: 'Deanna',   email: "deanna.troi@enterprise.com",    phone: "555-333-3333" },
-        { name: 'Data',     email: "mr.data@enterprise.com",        phone: "555-444-4444" }
-    ]},
+    model: 'Sofoil.model.User',
+
+    data: {
+        items: [
+            {
+                'id': 1,
+                'name': 'Lisa',
+                'email': 'lisa@simpsons.com',
+                'phone': '555-111-1224',
+                'bio': 'Это поле показывается только для полной карточки контакта'
+            },
+            {
+                'id': 2,
+                'name': 'Bart',
+                'email': 'bart@simpsons.com',
+                'phone': '555-222-1234',
+                'bio': 'Это поле показывается только для полной карточки контакта'
+            },
+            {
+                'id': 3,
+                'name': 'Homer',
+                'email': 'homer@simpsons.com',
+                'phone': '555-222-1244',
+                'bio': 'Это поле показывается только для полной карточки контакта'
+            },
+            {
+                'id': 4,
+                'name': 'Marge',
+                'email': 'marge@simpsons.com',
+                'phone': '555-222-1254',
+                'bio': 'Это поле показывается только для полной карточки контакта'
+            }
+        ]
+    },
 
     proxy: {
         type: 'memory',

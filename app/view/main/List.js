@@ -5,10 +5,6 @@ Ext.define('Sofoil.view.main.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
 
-    requires: [
-        'Sofoil.store.Personnel'
-    ],
-
     title: 'Personnel',
 
     store: {

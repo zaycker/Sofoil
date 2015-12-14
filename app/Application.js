@@ -8,11 +8,11 @@ Ext.define('Sofoil.Application', {
     
     name: 'Sofoil',
 
+    routes: {
+        'user/:id': 'showUser'
+    },
+
     stores: [
-        // TODO: add global / shared stores here
-    ],
-    
-    launch: function () {
-        // TODO - Launch the application
-    }
+        'Sofoil.store.Personnel'
+    ]
 });
